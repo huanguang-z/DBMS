@@ -1,0 +1,24 @@
+{
+  // 打开工程自动执行 CMake Configure
+  "cmake.configureOnOpen": true,
+
+  // 使用 Ninja，构建目录固定到 build/
+  "cmake.generator": "Ninja",
+  "cmake.buildDirectory": "${workspaceFolder}/build",
+  "cmake.buildType": "RelWithDebInfo",
+  // 传给 CMake 的默认参数（可按需改）
+  "cmake.configureArgs": [
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+    "-DDBMS_STORAGE_ENABLE_LRUK=OFF"
+  ],
+
+  // 并行编译
+  "cmake.parallelJobs": 8,
+
+  // 让 cpptools 直接读取 compile_commands.json（由 CMake 生成）
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "C_Cpp.default.cppStandard": "c++17",
+
+  // 可选：格式化
+  "[cpp]": { "editor.defaultFormatter": "ms-vscode.cpptools" }
+}

@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run main_storage_load (gdb)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/main_storage_load",
+      "args": [
+        "../supplier.tbl",
+        "--base_dir=../run/lab1",
+        "--frames=256",
+        "--page=8192",
+        "--replacer=clock",
+        "--log_every=1000"
+      ],
+      "cwd": "${workspaceFolder}/build",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "externalConsole": false,
+      "preLaunchTask": "CMake: build"
+    }
+  ]
+}
